@@ -22,7 +22,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('Api.urls')),
-    path('api/docs/',include_docs_urls(title='Apis',public=True))
+    path('',include_docs_urls(title='Apis',public=True))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)#new
